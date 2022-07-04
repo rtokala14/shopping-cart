@@ -4,12 +4,15 @@ import Header from "./components/Header";
 import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
 import About from "./components/pages/About";
+import { useState } from "react";
 
 function App() {
+  const [cartInfo, setCartInfo] = useState({ count: 0, contents: [] });
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header cartInfo={cartInfo} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

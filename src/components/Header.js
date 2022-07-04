@@ -2,7 +2,7 @@ import { Badge } from "@material-ui/core";
 import { ShoppingCartRounded } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className=" flex justify-between p-6 items-center">
       <div className=" pl-10">
@@ -19,7 +19,7 @@ const Header = () => {
           <Link to={"/about"}>About</Link>
         </li>
         <li>
-          <Badge badgeContent={"3"} overlap="rectangular">
+          <Badge badgeContent={props.cartInfo.count} overlap="rectangular">
             <ShoppingCartRounded />
           </Badge>
         </li>
