@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-option {
+    @apply hover:underline hover:cursor-pointer
+}
