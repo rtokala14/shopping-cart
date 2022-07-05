@@ -129,14 +129,7 @@ const Shop = ({
         <ul className=" flex flex-wrap justify-center items-center gap-4">
           {Products.map((product) => {
             if (product.universe !== universe) return;
-            if (searchValue !== "") {
-              if (
-                product.name.toLowerCase().includes(searchValue.toLowerCase())
-              ) {
-                return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
-              }
-            } else if (product.affiliation === affiliation)
-              return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
+            return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
           })}
         </ul>
       </div>

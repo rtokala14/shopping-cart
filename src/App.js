@@ -10,7 +10,7 @@ function App() {
   const [cartInfo, setCartInfo] = useState(0);
   const [cartList, setCartList] = useState([]);
   const [universe, setUniverse] = useState("marvel");
-  const [affiliation, setAffiliation] = useState("avengers");
+  const [affiliation, setAffiliation] = useState("");
   const [searchValue, setSearchValue] = useState("");
 
   return (
