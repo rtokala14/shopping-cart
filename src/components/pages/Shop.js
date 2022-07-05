@@ -11,6 +11,18 @@ const Shop = ({
   setSearchValue,
 }) => {
   const Card = ({ prod }) => {
+    const decrProdCounter = (e) => {
+      if (e.target.nextElementSibling.value > 0) {
+        e.target.nextElementSibling.value =
+          Number(e.target.nextElementSibling.value) - 1;
+      }
+    };
+
+    const incrProdCounter = (e) => {
+      e.target.previousElementSibling.value =
+        Number(e.target.previousElementSibling.value) + 1;
+    };
+
     return (
       <li>
         <div className=" flex flex-col hover:cursor-pointer">
@@ -24,13 +36,17 @@ const Shop = ({
             </div>
             <div className=" flex items-end gap-1">
               <div className=" pr-2 flex justify-center items-center">
-                <button className=" text-3xl">-</button>
+                <button className=" text-3xl" onClick={decrProdCounter}>
+                  -
+                </button>
                 <input
-                  type="text"
+                  type="number"
                   defaultValue={0}
                   className=" w-8 text-center p-1"
                 />
-                <button className=" text-3xl">+</button>
+                <button className=" text-3xl" onClick={incrProdCounter}>
+                  +
+                </button>
               </div>
               <div className=" pb-1">
                 <ShoppingCartOutlined />
