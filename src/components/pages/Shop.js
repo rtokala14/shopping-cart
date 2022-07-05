@@ -1,6 +1,5 @@
 import Products from "./products/Products";
 import uniqid from "uniqid";
-//import { ShoppingCartOutlined } from "@material-ui/icons";
 
 const Shop = ({
   universe,
@@ -11,6 +10,8 @@ const Shop = ({
   setSearchValue,
   cartInfo,
   setCartInfo,
+  cartList,
+  setCartList,
 }) => {
   const Card = ({ cardId, prod }) => {
     const decrProdCounter = (e) => {
@@ -28,14 +29,12 @@ const Shop = ({
     const updateCart = (e) => {
       const counter =
         e.target.parentElement.previousElementSibling.children[1].value;
-      /*const info = {
-        count: field.nodeValue,
-        product: prod,
-      };
-      setCartInfo(info);*/
-      console.log(counter);
       setCartInfo(Number(cartInfo) + Number(counter));
-      prod.count = Number(counter);
+      prod.count = prod.count + Number(counter);
+      let test = [];
+      test = cartList;
+      test.push(prod);
+      setCartList(test);
     };
 
     return (

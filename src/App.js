@@ -8,6 +8,7 @@ import { useState } from "react";
 
 function App() {
   const [cartInfo, setCartInfo] = useState(0);
+  const [cartList, setCartList] = useState([]);
   const [universe, setUniverse] = useState("marvel");
   const [affiliation, setAffiliation] = useState("avengers");
   const [searchValue, setSearchValue] = useState("");
@@ -30,6 +31,8 @@ function App() {
                 setSearchValue={setSearchValue}
                 cartInfo={cartInfo}
                 setCartInfo={setCartInfo}
+                cartList={cartList}
+                setCartList={setCartList}
               />
             }
           />
