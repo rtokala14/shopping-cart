@@ -18,7 +18,7 @@ const Header = (props) => {
         <li className=" header-option">
           <Link to={"/about"}>About</Link>
         </li>
-        <li>
+        <li className=" hover:cursor-pointer">
           <Badge badgeContent={props.cartInfo.count} overlap="rectangular">
             <ShoppingCartRounded />
           </Badge>
