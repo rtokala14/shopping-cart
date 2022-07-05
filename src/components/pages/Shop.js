@@ -35,7 +35,7 @@ const Shop = ({
       setCartInfo(info);*/
       console.log(counter);
       setCartInfo(Number(cartInfo) + Number(counter));
-      prod.count = prod.count + Number(counter);
+      prod.count = Number(counter);
     };
 
     return (
@@ -56,7 +56,7 @@ const Shop = ({
                 </button>
                 <input
                   type="number"
-                  defaultValue={prod.count}
+                  defaultValue={0}
                   className=" w-8 text-center p-1"
                   id={`prod-card_${cardId}`}
                 />
