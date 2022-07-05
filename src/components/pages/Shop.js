@@ -20,7 +20,7 @@ const Shop = ({
           <div className=" w-80 h-24 flex justify-between items-center">
             <div className=" flex flex-col gap-1">
               <h2 className=" text-lg font-medium">{prod.name}</h2>
-              <h3>{`\$${prod.price}`}</h3>
+              <h3>{`$${prod.price}`}</h3>
             </div>
             <div className=" flex items-end gap-1">
               <div className=" pr-2 flex justify-center items-center">
