@@ -1,6 +1,6 @@
 import Products from "./products/Products";
 import uniqid from "uniqid";
-import { ShoppingCartOutlined } from "@material-ui/icons";
+//import { ShoppingCartOutlined } from "@material-ui/icons";
 
 const Shop = ({
   universe,
@@ -9,8 +9,10 @@ const Shop = ({
   setAffiliation,
   searchValue,
   setSearchValue,
+  cartInfo,
+  setCartInfo,
 }) => {
-  const Card = ({ prod }) => {
+  const Card = ({ cardId, prod }) => {
     const decrProdCounter = (e) => {
       if (e.target.nextElementSibling.value > 0) {
         e.target.nextElementSibling.value =
@@ -21,6 +23,19 @@ const Shop = ({
     const incrProdCounter = (e) => {
       e.target.previousElementSibling.value =
         Number(e.target.previousElementSibling.value) + 1;
+    };
+
+    const updateCart = (e) => {
+      const counter =
+        e.target.parentElement.previousElementSibling.children[1].value;
+      /*const info = {
+        count: field.nodeValue,
+        product: prod,
+      };
+      setCartInfo(info);*/
+      console.log(counter);
+      setCartInfo(Number(cartInfo) + Number(counter));
+      prod.count = prod.count + Number(counter);
     };
 
     return (
@@ -41,16 +56,34 @@ const Shop = ({
                 </button>
                 <input
                   type="number"
-                  defaultValue={0}
+                  defaultValue={prod.count}
                   className=" w-8 text-center p-1"
+                  id={`prod-card_${cardId}`}
                 />
                 <button className=" text-3xl" onClick={incrProdCounter}>
                   +
                 </button>
               </div>
-              <div className=" pb-1">
-                <ShoppingCartOutlined />
-              </div>
+              <button
+                className=" pb-2 pointer-events-none"
+                onClick={updateCart}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 pointer-events-auto"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                    className=" pointer-events-none"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -67,10 +100,10 @@ const Shop = ({
             if (
               product.name.toLowerCase().includes(searchValue.toLowerCase())
             ) {
-              return <Card key={uniqid()} prod={product} />;
+              return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
             }
           } else if (product.affiliation === affiliation)
-            return <Card key={uniqid()} prod={product} />;
+            return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
         })}
       </ul>
     </div>

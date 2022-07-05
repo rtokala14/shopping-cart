@@ -7,7 +7,7 @@ import About from "./components/pages/About";
 import { useState } from "react";
 
 function App() {
-  const [cartInfo, setCartInfo] = useState({ count: 0, contents: [] });
+  const [cartInfo, setCartInfo] = useState(0);
   const [universe, setUniverse] = useState("marvel");
   const [affiliation, setAffiliation] = useState("avengers");
   const [searchValue, setSearchValue] = useState("");
@@ -28,6 +28,7 @@ function App() {
                 setAffiliation={setAffiliation}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
+                cartInfo={cartInfo}
                 setCartInfo={setCartInfo}
               />
             }

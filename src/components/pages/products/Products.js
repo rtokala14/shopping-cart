@@ -8,6 +8,7 @@ const Products = [
     affiliation: "xmen",
     hero: "deadpool",
     image: images.marvel.armorized_deadpool,
+    count: 0,
   },
   {
     name: "Captain America",
@@ -16,6 +17,7 @@ const Products = [
     affiliation: "avengers",
     hero: "captainAmerica",
     image: images.marvel.captain_america,
+    count: 0,
   },
   {
     name: "Deadpool",
@@ -24,6 +26,7 @@ const Products = [
     affiliation: "xmen",
     hero: "deadpool",
     image: images.marvel.deadpool,
+    count: 0,
   },
   {
     name: "Gambit Deluxe",
@@ -32,6 +35,7 @@ const Products = [
     affiliation: "xmen",
     hero: "gambit",
     image: images.marvel.gambit_deluxe,
+    count: 0,
   },
   {
     name: "Hulk Vs Hulkbuster",
@@ -40,6 +44,7 @@ const Products = [
     affiliation: "avengers",
     hero: "hulk",
     image: images.marvel.hulk_vs_hulkbuster,
+    count: 0,
   },
   {
     name: "Iron Man Mark XLiii",
@@ -48,6 +53,7 @@ const Products = [
     affiliation: "avengers",
     hero: "ironMan",
     image: images.marvel.iron_main_mark_xlii,
+    count: 0,
   },
   {
     name: "Iron Man Neon Tech 40",
@@ -56,6 +62,7 @@ const Products = [
     affiliation: "avengers",
     hero: "ironMan",
     image: images.marvel.iron_man_neon_tech_40,
+    count: 0,
   },
   {
     name: "Quicksilver",
@@ -64,6 +71,7 @@ const Products = [
     affiliation: "xmen",
     hero: "quicksilver",
     image: images.marvel.quicksilver,
+    count: 0,
   },
   {
     name: "Spider Man",
@@ -72,6 +80,7 @@ const Products = [
     affiliation: "avengers",
     hero: "spiderman",
     image: images.marvel.spider_man,
+    count: 0,
   },
   {
     name: "Spider Man Deluxe Version",
@@ -80,6 +89,7 @@ const Products = [
     affiliation: "avengers",
     hero: "spiderman",
     image: images.marvel.spider_man_deluxe_version_special_edition,
+    count: 0,
   },
   {
     name: "Spider Man Negative Zone Suit",
@@ -88,6 +98,7 @@ const Products = [
     affiliation: "avengers",
     hero: "spiderman",
     image: images.marvel.spider_man_negative_zone_suit,
+    count: 0,
   },
   {
     name: "Thor Endgame",
@@ -96,6 +107,7 @@ const Products = [
     affiliation: "avengers",
     hero: "thor",
     image: images.marvel.thor_sixth_scale_figure,
+    count: 0,
   },
   {
     name: "Venomized Groot",
@@ -104,6 +116,7 @@ const Products = [
     affiliation: "guardians",
     hero: "groot",
     image: images.marvel.venomized_groot,
+    count: 0,
   },
   {
     name: "Wolverine",
@@ -112,6 +125,7 @@ const Products = [
     affiliation: "xmen",
     hero: "wolverine",
     image: images.marvel.wolverine,
+    count: 0,
   },
 ];
 
