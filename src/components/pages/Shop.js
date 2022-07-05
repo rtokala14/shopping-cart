@@ -1,5 +1,6 @@
 import Products from "./products/Products";
 import uniqid from "uniqid";
+import { useEffect } from "react";
 
 const Shop = ({
   universe,
@@ -13,6 +14,17 @@ const Shop = ({
   cartList,
   setCartList,
 }) => {
+  useEffect(() => {
+    if (universe === "marvel") {
+      document.getElementById("marvel-btn").classList.add("active");
+      document.getElementById("dc-btn").classList.remove("active");
+    }
+    if (universe === "dc") {
+      document.getElementById("dc-btn").classList.add("active");
+      document.getElementById("marvel-btn").classList.remove("active");
+    }
+  }, [universe]);
+
   const Card = ({ cardId, prod }) => {
     const decrProdCounter = (e) => {
       if (e.target.nextElementSibling.value > 0) {
@@ -90,21 +102,44 @@ const Shop = ({
     );
   };
 
+  const changeUniverse = (uni) => {
+    if (uni === "marvel") setUniverse("marvel");
+    if (uni === "dc") setUniverse("dc");
+  };
+
   return (
-    <div className=" p-4 flex justify-center items-center">
-      <ul className=" flex flex-wrap justify-center items-center gap-4">
-        {Products.map((product) => {
-          if (product.universe !== universe) return;
-          if (searchValue !== "") {
-            if (
-              product.name.toLowerCase().includes(searchValue.toLowerCase())
-            ) {
+    <div className=" flex flex-col">
+      <div className=" p-1 pl-11 pb-3 gap-4 flex">
+        <button
+          className=" universe-btn marvel active"
+          id="marvel-btn"
+          onClick={() => changeUniverse("marvel")}
+        >
+          Marvel
+        </button>
+        <button
+          className=" universe-btn dc"
+          id="dc-btn"
+          onClick={() => changeUniverse("dc")}
+        >
+          DC Comics
+        </button>
+      </div>
+      <div className=" p-4 flex justify-center items-center">
+        <ul className=" flex flex-wrap justify-center items-center gap-4">
+          {Products.map((product) => {
+            if (product.universe !== universe) return;
+            if (searchValue !== "") {
+              if (
+                product.name.toLowerCase().includes(searchValue.toLowerCase())
+              ) {
+                return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
+              }
+            } else if (product.affiliation === affiliation)
               return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
-            }
-          } else if (product.affiliation === affiliation)
-            return <Card key={uniqid()} prod={product} cardId={uniqid()} />;
-        })}
-      </ul>
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
-    <header className=" flex justify-between p-6 items-center">
-      <div className=" pl-10">
+    <header className=" flex justify-between p-6 pb-2 items-center">
+      <div className=" pl-5">
         <h1 className=" text-4xl font-bold">Geekables</h1>
       </div>
       <ul className=" flex gap-5 pr-5 justify-evenly">
