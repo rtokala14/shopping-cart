@@ -57,6 +57,88 @@ const images = {
       require("./marvel/wolverine_th.jpg"),
     ],
   },
+  dc: {
+    batman: [
+      require("./dc/batman_dc-comics_gallery_5fca8871243a6.jpg"),
+      require("./dc/batman_dc-comics_gallery_5fca8871243a6_th.jpg"),
+    ],
+    golden_armour_wonder_woman: [
+      require("./dc/golden-armor-wonder-woman-deluxe_dc-comics_gallery_5ec80381c30f5.jpg"),
+      require("./dc/golden-armor-wonder-woman-deluxe_dc-comics_gallery_5ec80381c30f5_th.jpg"),
+    ],
+    superman_black_suite: [
+      require("./dc/superman-black-suit_dc-comics_gallery_6053a16bc6259.jpg"),
+      require("./dc/superman-black-suit_dc-comics_gallery_6053a16bc6259_th.jpg"),
+    ],
+    catwoman: [
+      require("./dc/catwoman_dc-comics_gallery_62aa52acdfc2d.jpg"),
+      require("./dc/catwoman_dc-comics_gallery_62aa52acdfc2d_th.jpg"),
+    ],
+    the_joker: [
+      require("./dc/the-joker_dc-comics_gallery_6117195ad5b6c.jpg"),
+      require("./dc/the-joker_dc-comics_gallery_6117195ad5b6c_th.jpg"),
+    ],
+    catwoman_laying_down: [
+      require("./dc/catwoman_dc-comics_gallery_5fac677382650.jpg"),
+      require("./dc/catwoman_dc-comics_gallery_5fac677382650_th.jpg"),
+    ],
+    superman_call_to_action: [
+      require("./dc/superman-call-to-action_dc-comics_gallery_60075a7b8a2ce.jpg"),
+      require("./dc/superman-call-to-action_dc-comics_gallery_60075a7b8a2ce_th.jpg"),
+    ],
+    batman_vs_the_joker: [
+      require("./dc/batman-vs-the-joker_dc-comics_gallery_618326b57b22e.jpg"),
+      require("./dc/batman-vs-the-joker_dc-comics_gallery_618326b57b22e_th.jpg"),
+    ],
+    green_lantern: [
+      require("./dc/green-lantern_dc-comics_gallery_5c53a218f2be8.jpg"),
+      require("./dc/green-lantern_dc-comics_gallery_5c53a218f2be8_th.jpg"),
+    ],
+    black_canary: [
+      require("./dc/black-canary_dc-comics_gallery_61d5fab347c1f.jpg"),
+      require("./dc/black-canary_dc-comics_gallery_61d5fab347c1f_th.jpg"),
+    ],
+    harley_quinn_caution_tape: [
+      require("./dc/harley-quinn-caution-tape-jacket-version_dc-comics_gallery_5e67d4f5efad2.jpg"),
+      require("./dc/harley-quinn-caution-tape-jacket-version_dc-comics_gallery_5e67d4f5efad2_th.jpg"),
+    ],
+    batgirl: [
+      require("./dc/batgirl_dc-comics_gallery_5e6bb9d0c6d4b.jpg"),
+      require("./dc/batgirl_dc-comics_gallery_5e6bb9d0c6d4b_th.jpg"),
+    ],
+    batman_who_laughs: [
+      require("./dc/batman-who-laughs_dc-comics_gallery_61c28e1a25937.jpg"),
+      require("./dc/batman-who-laughs_dc-comics_gallery_61c28e1a25937_th.jpg"),
+    ],
+    power_girl: [
+      require("./dc/power-girl_dc-comics_gallery_620e8de102852.jpg"),
+      require("./dc/power-girl_dc-comics_gallery_620e8de102852_th.jpg"),
+    ],
+    the_flash_sixth_scale: [
+      require("./dc/the-flash-sixth-scale-figure-the-flash-tv-series_dc-comics_gallery_5dadee9af0c70.jpg"),
+      require("./dc/the-flash-sixth-scale-figure-the-flash-tv-series_dc-comics_gallery_5dadee9af0c70_th.jpg"),
+    ],
+    harley_quinn: [
+      require("./dc/harley-quinn_dc-comics_gallery_62856b5b23336.jpg"),
+      require("./dc/harley-quinn_dc-comics_gallery_62856b5b23336_th.jpg"),
+    ],
+    darkseid: [
+      require("./dc/darkseid_dc-comics_gallery_615b8b31cd25e.jpg"),
+      require("./dc/darkseid_dc-comics_gallery_615b8b31cd25e_th.jpg"),
+    ],
+    catwoman_batman_returns: [
+      require("./dc/catwoman_dc-comics_gallery_5fe123e031bf1.jpg"),
+      require("./dc/catwoman_dc-comics_gallery_5fe123e031bf1_th.jpg"),
+    ],
+    batman_batcave_version: [
+      require("./dc/batman-batcave-version_dc-comics_gallery_5f4001345ae39.jpg"),
+      require("./dc/batman-batcave-version_dc-comics_gallery_5f4001345ae39_th.jpg"),
+    ],
+    catwoman_premium_format: [
+      require("./dc/catwoman_dc-comics_gallery_5dc3318d3db97.jpg"),
+      require("./dc/catwoman_dc-comics_gallery_5dc3318d3db97_th.jpg"),
+    ],
+  },
 };
 
 export default images;
