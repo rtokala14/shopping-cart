@@ -1,5 +1,5 @@
 import { NaturePeopleTwoTone } from "@material-ui/icons";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import uniqid from "uniqid";
 
@@ -15,6 +15,16 @@ const Cart = ({ list }) => {
       not.classList.remove("hidden");
     }
   });
+
+  let [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    let temp = 0.0;
+    list.forEach((item) => {
+      temp += item.count * item.price;
+    });
+    setTotal(temp);
+  }, [list]);
 
   return (
     <div className=" p-9 flex flex-col justify-center items-center">
@@ -47,7 +57,7 @@ const Cart = ({ list }) => {
                   />
                   <h4 className=" text-lg font-medium">{item.name}</h4>
                 </div>
-                <div className=" flex gap-6">
+                <div className=" flex gap-9">
                   <div className=" flex justify-center items-center p-2 gap-2 rounded-md border border-slate-200">
                     <button className=" text-3xl">-</button>
                     <input
@@ -65,10 +75,16 @@ const Cart = ({ list }) => {
             );
           })}
         </div>
-        <div className=" mt-5 flex flex-row-reverse">
-          <button className=" p-4 text-lg rounded-md bg-black text-white">
-            Checkout
-          </button>
+        <div className=" mt-5 flex flex-row-reverse pr-4">
+          <div className=" flex flex-col gap-3 items-center">
+            <div className=" flex justify-between items-center gap-20">
+              <h2>Subtotal</h2>
+              <h2>{"$" + total + ".00"}</h2>
+            </div>
+            <button className=" p-4 text-lg rounded-md bg-black text-white">
+              Checkout
+            </button>
+          </div>
         </div>
       </div>
     </div>
