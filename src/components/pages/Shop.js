@@ -42,10 +42,23 @@ const Shop = ({
       const counter =
         e.target.parentElement.previousElementSibling.children[1].value;
       setCartInfo(Number(cartInfo) + Number(counter));
-      prod.count = prod.count + Number(counter);
-      let test = [];
-      test = cartList;
-      test.push(prod);
+      let check = 0;
+      const test = cartList.map((item) => {
+        if (item.name === prod.name) {
+          let tCount = item.count;
+          const updatedItem = {
+            ...item,
+            count: Number(tCount) + Number(counter),
+          };
+          check = 1;
+          return updatedItem;
+        }
+        return item;
+      });
+      prod.count = Number(counter);
+      if (check === 0) {
+        test.push(prod);
+      }
       setCartList(test);
     };
 
