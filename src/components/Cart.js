@@ -47,7 +47,7 @@ const Cart = ({ list }) => {
             return (
               <div
                 key={uniqid()}
-                className=" p-2 h-32 items-center flex justify-between"
+                className=" p-2 items-center gap-3 flex flex-col md:flex-row md:justify-between"
               >
                 <div className=" flex gap-3">
                   <img
