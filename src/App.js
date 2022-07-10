@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
 import About from "./components/pages/About";
 import { useState } from "react";
+import Cart from "./components/Cart";
 
 function App() {
   const [cartInfo, setCartInfo] = useState(0);
@@ -37,6 +38,7 @@ function App() {
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart list={cartList} />} />
         </Routes>
         <Footer />
       </div>
