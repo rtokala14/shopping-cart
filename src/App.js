@@ -37,7 +37,7 @@ function App() {
               />
             }
           />
-          <Route path="/about" element={<About />} />
+          {/*<Route path="/about" element={<About />} />*/}
           <Route path="/cart" element={<Cart list={cartList} />} />
         </Routes>
         <Footer />

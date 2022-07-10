@@ -15,9 +15,9 @@ const Header = (props) => {
         <li className=" header-option">
           <Link to={"/shop"}>Shop</Link>
         </li>
-        <li className=" header-option">
+        {/*<li className=" header-option">
           <Link to={"/about"}>About</Link>
-        </li>
+  </li>*/}
         <li className=" hover:cursor-pointer">
           <Badge badgeContent={props.cartInfo} overlap="rectangular">
             <Link to={"/cart"}>
