@@ -41,13 +41,13 @@ const Cart = ({ list }) => {
           </Link>
         </h3>
       </div>
-      <div id="notEmptyCartContent">
+      <div className=" w-4/5" id="notEmptyCartContent">
         <div className=" border-t border-b border-t-slate-500 border-b-slate-500">
           {list.map((item) => {
             return (
               <div
                 key={uniqid()}
-                className=" p-2 h-32 items-center flex gap-96 justify-between"
+                className=" p-2 h-32 items-center flex justify-between"
               >
                 <div className=" flex gap-3">
                   <img
