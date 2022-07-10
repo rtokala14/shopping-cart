@@ -3,7 +3,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
-import About from "./components/pages/About";
 import { useState } from "react";
 import Cart from "./components/Cart";
 
@@ -38,7 +37,10 @@ function App() {
             }
           />
           {/*<Route path="/about" element={<About />} />*/}
-          <Route path="/cart" element={<Cart list={cartList} />} />
+          <Route
+            path="/cart"
+            element={<Cart list={cartList} setList={setCartList} />}
+          />
         </Routes>
         <Footer />
       </div>

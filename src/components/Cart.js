@@ -1,9 +1,8 @@
-import { NaturePeopleTwoTone } from "@material-ui/icons";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import uniqid from "uniqid";
 
-const Cart = ({ list }) => {
+const Cart = ({ list, setList }) => {
   useEffect(() => {
     const empty = document.getElementById("emptyCartContent");
     const not = document.getElementById("notEmptyCartContent");
@@ -25,6 +24,21 @@ const Cart = ({ list }) => {
     });
     setTotal(temp);
   }, [list]);
+
+  /*const decrementItem = (item) => {
+    const newList = list.map((it) => {
+      if (it.name === item) {
+        let prevCount = it.count;
+        const updateIt = {
+          ...it,
+          count: prevCount - 1,
+        };
+        return updateIt;
+      }
+      return it;
+    });
+    setList(newList);
+  };*/
 
   return (
     <div className=" p-9 flex flex-col justify-center items-center">
@@ -60,11 +74,7 @@ const Cart = ({ list }) => {
                 <div className=" flex gap-9">
                   <div className=" flex justify-center items-center p-2 gap-2 rounded-md border border-slate-200">
                     <button className=" text-3xl">-</button>
-                    <input
-                      type="number"
-                      defaultValue={item.count}
-                      className=" w-8 text-center p-1"
-                    />
+                    <p className=" w-8 text-center p-1"> {item.count} </p>
                     <button className=" text-3xl">+</button>
                   </div>
                   <div className=" flex justify-center items-center">
